@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_HCTKModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TF_SHLC">
+          <Key>
+            <PropertyRef Name="BIL_ID" />
+            <PropertyRef Name="MOB_ID" />
+            <PropertyRef Name="ITM" />
+          </Key>
+          <Property Name="BIL_ID" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="MOB_ID" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="ITM" Type="int" Nullable="false" />
+          <Property Name="USR" Type="varchar" MaxLength="12" />
+          <Property Name="REM" Type="varchar" MaxLength="60" />
+          <Property Name="OTHUSR" Type="varchar" MaxLength="250" />
+          <Property Name="VALID_TIME" Type="smallint" />
+          <Property Name="DELAY_TIME" Type="smallint" />
+          <Property Name="TONEXT" Type="varchar" MaxLength="1" />
+          <Property Name="OTH1USR" Type="varchar" MaxLength="250" />
+          <Property Name="OTH1USR1" Type="varchar" MaxLength="250" />
+          <Property Name="GROUP_NO" Type="varchar" MaxLength="12" />
+          <Property Name="IS_TITLE" Type="varchar" MaxLength="1" />
+          <Property Name="SH_ITM" Type="int" />
+          <Property Name="CDT_SQL" Type="varchar" MaxLength="4000" />
+        </EntityType>
+        <EntityContainer Name="DB_HCTKModelStoreContainer">
+          <EntitySet Name="TF_SHLC" EntityType="Self.TF_SHLC" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_HCTKModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TF_SHLC">
+          <Key>
+            <PropertyRef Name="BIL_ID" />
+            <PropertyRef Name="MOB_ID" />
+            <PropertyRef Name="ITM" />
+          </Key>
+          <Property Name="BIL_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MOB_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ITM" Type="Int32" Nullable="false" />
+          <Property Name="USR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="REM" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="OTHUSR" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="VALID_TIME" Type="Int16" />
+          <Property Name="DELAY_TIME" Type="Int16" />
+          <Property Name="TONEXT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="OTH1USR" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="OTH1USR1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="GROUP_NO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="IS_TITLE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SH_ITM" Type="Int32" />
+          <Property Name="CDT_SQL" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="DB_HCTKEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TF_SHLC" EntityType="Self.TF_SHLC" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_HCTKModelStoreContainer" CdmEntityContainer="DB_HCTKEntities">
+          <EntitySetMapping Name="TF_SHLC">
+            <EntityTypeMapping TypeName="DB_HCTKModel.TF_SHLC">
+              <MappingFragment StoreEntitySet="TF_SHLC">
+                <ScalarProperty Name="BIL_ID" ColumnName="BIL_ID" />
+                <ScalarProperty Name="MOB_ID" ColumnName="MOB_ID" />
+                <ScalarProperty Name="ITM" ColumnName="ITM" />
+                <ScalarProperty Name="USR" ColumnName="USR" />
+                <ScalarProperty Name="REM" ColumnName="REM" />
+                <ScalarProperty Name="OTHUSR" ColumnName="OTHUSR" />
+                <ScalarProperty Name="VALID_TIME" ColumnName="VALID_TIME" />
+                <ScalarProperty Name="DELAY_TIME" ColumnName="DELAY_TIME" />
+                <ScalarProperty Name="TONEXT" ColumnName="TONEXT" />
+                <ScalarProperty Name="OTH1USR" ColumnName="OTH1USR" />
+                <ScalarProperty Name="OTH1USR1" ColumnName="OTH1USR1" />
+                <ScalarProperty Name="GROUP_NO" ColumnName="GROUP_NO" />
+                <ScalarProperty Name="IS_TITLE" ColumnName="IS_TITLE" />
+                <ScalarProperty Name="SH_ITM" ColumnName="SH_ITM" />
+                <ScalarProperty Name="CDT_SQL" ColumnName="CDT_SQL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

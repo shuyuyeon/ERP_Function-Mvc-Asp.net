@@ -1,0 +1,109 @@
+﻿@using PagedList.Mvc <!--.cs内也可引用-->
+@model PagedList.IPagedList<controlbindaction.Models.TF_SHLC>
+
+@{
+    ViewBag.Title = "审核作业";
+}
+
+<h2>单据审核阶段</h2>
+
+<div class="well">
+    <button class="btn btn-primary" data-toggle="modal" data-target="#UploadModal">
+        匯入資料
+    </button>
+    <button class="btn btn-primary" id="ButtonExport" name="ButtonExport">
+        匯出資料
+    </button>
+</div>
+
+
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page }))<!--PagedList为HtmlHelper写的扩展-->
+
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().BIL_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().MOB_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().ITM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().USR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().REM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().OTHUSR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().VALID_TIME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().DELAY_TIME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().TONEXT)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BIL_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MOB_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ITM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.USR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.REM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OTHUSR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VALID_TIME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DELAY_TIME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TONEXT)
+            </td>
+        </tr>
+    }
+
+</table>
+
+@Html.Partial("_UploadFile")
+
+@section scripts
+{
+    <script src="~/Scripts/bootbox.js"></script>
+    <script src="~/Scripts/jquery.form.js"></script>
+    <script src="~/Scripts/project.js"></script>
+    <script src="~/Scripts/project.extends.js"></script>
+    <script src="~/Scripts/project.ZipCode.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var actionUrls = {
+                Upload: '@Url.Action("Upload", "SHLC")',
+                Import: '@Url.Action("Import", "SHLC")',
+                HasData: '@Url.Action("HasData", "SHLC")',
+                ExportData: '@Url.Action("Export", "SHLC")'
+            };
+            project.ZipCode.Initialize(actionUrls);
+        });
+    </script>
+}

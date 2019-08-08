@@ -1,0 +1,861 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DB_HCTKModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MF_IJ">
+          <Key>
+            <PropertyRef Name="IJ_ID" />
+            <PropertyRef Name="IJ_NO" />
+          </Key>
+          <Property Name="IJ_ID" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="IJ_NO" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="IJ_DD" Type="datetime" />
+          <Property Name="IJ_REASON" Type="varchar" MaxLength="4" />
+          <Property Name="FIX_CST" Type="varchar" MaxLength="1" />
+          <Property Name="ACC_NO_D" Type="varchar" MaxLength="20" />
+          <Property Name="ACC_NO_C" Type="varchar" MaxLength="20" />
+          <Property Name="DEP" Type="varchar" MaxLength="8" />
+          <Property Name="VOH_ID" Type="varchar" MaxLength="2" />
+          <Property Name="VOH_NO" Type="varchar" MaxLength="20" />
+          <Property Name="REF_NO" Type="varchar" MaxLength="20" />
+          <Property Name="BAT_NO" Type="varchar" MaxLength="40" />
+          <Property Name="MAN_NO" Type="varchar" MaxLength="12" />
+          <Property Name="REM" Type="text" />
+          <Property Name="USR" Type="varchar" MaxLength="12" />
+          <Property Name="CHK_MAN" Type="varchar" MaxLength="12" />
+          <Property Name="PRT_SW" Type="varchar" MaxLength="1" />
+          <Property Name="CPY_SW" Type="varchar" MaxLength="1" />
+          <Property Name="BIL_NO" Type="varchar" MaxLength="20" />
+          <Property Name="BIL_ID" Type="varchar" MaxLength="2" />
+          <Property Name="CLS_DATE" Type="datetime" />
+          <Property Name="POS_NO" Type="varchar" MaxLength="20" />
+          <Property Name="IJID" Type="numeric" Precision="22" Scale="8" />
+          <Property Name="CAS_NO" Type="varchar" MaxLength="20" />
+          <Property Name="BIL_TYPE" Type="varchar" MaxLength="2" />
+          <Property Name="CNTT_NO" Type="varchar" MaxLength="40" />
+          <Property Name="ACC_NO_SS" Type="varchar" MaxLength="20" />
+          <Property Name="ACC_NO_SY" Type="varchar" MaxLength="20" />
+          <Property Name="MOB_ID" Type="varchar" MaxLength="2" />
+          <Property Name="LOCK_MAN" Type="varchar" MaxLength="12" />
+          <Property Name="LOCK_DATE" Type="datetime" />
+          <Property Name="FJ_NUM" Type="smallint" />
+          <Property Name="SYS_DATE" Type="datetime" />
+          <Property Name="POS_ID" Type="varchar" MaxLength="1" />
+          <Property Name="CUS_NO" Type="varchar" MaxLength="12" />
+          <Property Name="TASK_ID" Type="int" />
+          <Property Name="PRT_USR" Type="varchar" MaxLength="12" />
+          <Property Name="SQ_ID" Type="varchar" MaxLength="2" />
+          <Property Name="SQ_NO" Type="varchar" MaxLength="25" />
+          <Property Name="SQ_ITM" Type="int" />
+          <Property Name="ISSVS" Type="varchar" MaxLength="1" />
+          <Property Name="FROMCB_CALC" Type="varchar" MaxLength="1" />
+          <Property Name="JH_SO_NO" Type="varchar" MaxLength="20" />
+          <Property Name="TZZG" Type="varchar" MaxLength="1" />
+          <Property Name="YG_NO" Type="varchar" MaxLength="65" />
+          <Property Name="CANCEL_ID" Type="varchar" MaxLength="1" />
+          <Property Name="CUR_ID_IFRS" Type="varchar" MaxLength="4" />
+          <Property Name="EXC_RTO_IFRS" Type="numeric" Precision="22" Scale="8" />
+          <Property Name="PRT_DATE" Type="datetime" />
+          <Property Name="MODIFY_DD" Type="datetime" />
+          <Property Name="MODIFY_MAN" Type="varchar" MaxLength="12" />
+          <Property Name="SCAN_ID" Type="varchar" MaxLength="1" />
+          <Property Name="SCAN_USR" Type="varchar" MaxLength="12" />
+          <Property Name="SCAN_DATE" Type="datetime" />
+          <Property Name="SCAN_USR1" Type="varchar" MaxLength="12" />
+          <Property Name="SCAN_DATE1" Type="datetime" />
+          <Property Name="GROUP_KEY" Type="varchar" MaxLength="100" />
+          <Property Name="IJ_NO_MES" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MF_SQ">
+          <Key>
+            <PropertyRef Name="SQ_NO" />
+          </Key>
+          <Property Name="SQ_NO" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="SQ_DD" Type="datetime" />
+          <Property Name="DEP" Type="varchar" MaxLength="8" />
+          <Property Name="CUS_NO" Type="varchar" MaxLength="12" />
+          <Property Name="SAL_NO" Type="varchar" MaxLength="12" />
+          <Property Name="PO_NO" Type="varchar" MaxLength="20" />
+          <Property Name="INC_ID" Type="varchar" MaxLength="1" />
+          <Property Name="REM" Type="text" />
+          <Property Name="EST_DD" Type="datetime" />
+          <Property Name="BIL_ID" Type="varchar" MaxLength="2" />
+          <Property Name="USR" Type="varchar" MaxLength="12" />
+          <Property Name="CHK_MAN" Type="varchar" MaxLength="12" />
+          <Property Name="PRT_SW" Type="varchar" MaxLength="1" />
+          <Property Name="CPY_SW" Type="varchar" MaxLength="1" />
+          <Property Name="BAT_NO" Type="varchar" MaxLength="40" />
+          <Property Name="BIL_NO" Type="varchar" MaxLength="20" />
+          <Property Name="CLS_DATE" Type="datetime" />
+          <Property Name="PO_DEP" Type="varchar" MaxLength="8" />
+          <Property Name="CLS_ID" Type="varchar" MaxLength="1" />
+          <Property Name="BACK_ID" Type="varchar" MaxLength="2" />
+          <Property Name="BIL_TYPE" Type="varchar" MaxLength="2" />
+          <Property Name="CUR_ID" Type="varchar" MaxLength="4" />
+          <Property Name="EXC_RTO" Type="numeric" Precision="22" Scale="8" />
+          <Property Name="SO_NO" Type="varchar" MaxLength="25" />
+          <Property Name="MOB_ID" Type="varchar" MaxLength="2" />
+          <Property Name="LOCK_MAN" Type="varchar" MaxLength="12" />
+          <Property Name="LOCK_DATE" Type="datetime" />
+          <Property Name="SYS_DATE" Type="datetime" />
+          <Property Name="CAS_NO" Type="varchar" MaxLength="20" />
+          <Property Name="TASK_ID" Type="int" />
+          <Property Name="SO_ID" Type="varchar" MaxLength="2" />
+          <Property Name="PRT_USR" Type="varchar" MaxLength="12" />
+          <Property Name="CNTT_NO" Type="varchar" MaxLength="40" />
+          <Property Name="CANCEL_ID" Type="varchar" MaxLength="1" />
+          <Property Name="PRT_DATE" Type="datetime" />
+          <Property Name="MODIFY_DD" Type="datetime" />
+          <Property Name="MODIFY_MAN" Type="varchar" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="MF_SQ_FX">
+          <Key>
+            <PropertyRef Name="SQ_ID" />
+            <PropertyRef Name="SQ_NO" />
+          </Key>
+          <Property Name="SQ_ID" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="SQ_NO" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="SQ_DD" Type="datetime" />
+          <Property Name="DEP" Type="varchar" MaxLength="8" />
+          <Property Name="CUS_NO" Type="varchar" MaxLength="12" />
+          <Property Name="SAL_NO" Type="varchar" MaxLength="12" />
+          <Property Name="BIL_ID" Type="varchar" MaxLength="2" />
+          <Property Name="BIL_NO" Type="varchar" MaxLength="20" />
+          <Property Name="REM" Type="varchar" MaxLength="100" />
+          <Property Name="EST_DD" Type="datetime" />
+          <Property Name="USR" Type="varchar" MaxLength="12" />
+          <Property Name="CHK_MAN" Type="varchar" MaxLength="12" />
+          <Property Name="PRT_SW" Type="varchar" MaxLength="1" />
+          <Property Name="CPY_SW" Type="varchar" MaxLength="1" />
+          <Property Name="CLS_DATE" Type="datetime" />
+          <Property Name="DEP_PO" Type="varchar" MaxLength="8" />
+          <Property Name="CLS_ID" Type="varchar" MaxLength="1" />
+          <Property Name="BIL_TYPE" Type="varchar" MaxLength="2" />
+          <Property Name="CUR_ID" Type="varchar" MaxLength="4" />
+          <Property Name="EXC_RTO" Type="numeric" Precision="22" Scale="8" />
+          <Property Name="MOB_ID" Type="varchar" MaxLength="2" />
+          <Property Name="LOCK_MAN" Type="varchar" MaxLength="12" />
+          <Property Name="LOCK_DATE" Type="datetime" />
+          <Property Name="SYS_DATE" Type="datetime" />
+          <Property Name="PRT_USR" Type="varchar" MaxLength="12" />
+          <Property Name="CANCEL_ID" Type="varchar" MaxLength="1" />
+          <Property Name="PRT_DATE" Type="datetime" />
+          <Property Name="MODIFY_DD" Type="datetime" />
+          <Property Name="MODIFY_MAN" Type="varchar" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="SH_DJ">
+          <Key>
+            <PropertyRef Name="BIL_ID" />
+            <PropertyRef Name="BIL_NO" />
+            <PropertyRef Name="BIL_ITM" />
+          </Key>
+          <Property Name="BIL_ID" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="BIL_NO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="BIL_ITM" Type="int" Nullable="false" />
+          <Property Name="BIL_DD" Type="datetime" />
+          <Property Name="YN" Type="varchar" MaxLength="1" />
+          <Property Name="DEP" Type="varchar" MaxLength="8" />
+          <Property Name="USR_MAKE" Type="varchar" MaxLength="12" />
+          <Property Name="USR_CHECK" Type="varchar" MaxLength="12" />
+          <Property Name="USR_CLOSE" Type="varchar" MaxLength="12" />
+          <Property Name="REM" Type="text" />
+          <Property Name="PRE_CHK_MAN" Type="varchar" MaxLength="12" />
+          <Property Name="MOB_ID" Type="varchar" MaxLength="2" />
+          <Property Name="OT_ID" Type="varchar" MaxLength="2" />
+          <Property Name="OT_NO" Type="varchar" MaxLength="20" />
+          <Property Name="USR_N" Type="varchar" MaxLength="12" />
+          <Property Name="SH_DD" Type="datetime" />
+          <Property Name="OTHUSR" Type="varchar" MaxLength="250" />
+          <Property Name="SH_ITM" Type="int" />
+          <Property Name="PRE_SH_ITM" Type="int" />
+          <Property Name="PRE_PRE_SH_ITM" Type="int" />
+          <Property Name="USR_REJIGGER" Type="varchar" MaxLength="12" />
+          <Property Name="START_DD" Type="datetime" />
+          <Property Name="CHK_DD" Type="datetime" />
+          <Property Name="LAST_DD" Type="datetime" />
+          <Property Name="OT_ID2" Type="varchar" MaxLength="2" />
+          <Property Name="OT_NO2" Type="varchar" MaxLength="20" />
+          <Property Name="CUS_NO" Type="varchar" MaxLength="12" />
+          <Property Name="DEP_BIL" Type="varchar" MaxLength="8" />
+          <Property Name="BIL_TYPE" Type="varchar" MaxLength="10" />
+          <Property Name="SAL_NO" Type="varchar" MaxLength="12" />
+          <Property Name="CUS_OS_NO" Type="varchar" MaxLength="30" />
+          <Property Name="BAT_NO" Type="varchar" MaxLength="40" />
+          <Property Name="EIP_STS" Type="varchar" MaxLength="1" />
+          <Property Name="DTSH_SW" Type="varchar" MaxLength="1" />
+          <Property Name="DTSH_NO" Type="varchar" MaxLength="100" />
+          <Property Name="VER_NO" Type="varchar" MaxLength="10" />
+          <Property Name="NOT_RETURN" Type="varchar" MaxLength="1" />
+          <Property Name="SYS_DATE" Type="datetime" />
+          <Property Name="TYPE_NO" Type="varchar" MaxLength="6" />
+          <Property Name="UNSUBMIT" Type="varchar" MaxLength="1" />
+          <Property Name="IS_REMODIFY" Type="varchar" MaxLength="1" />
+          <Property Name="REM_BIL" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="SH_DL">
+          <Key>
+            <PropertyRef Name="USR" />
+            <PropertyRef Name="SQ_DD" />
+            <PropertyRef Name="BIL_ID" />
+            <PropertyRef Name="MOB_ID" />
+            <PropertyRef Name="ITM" />
+          </Key>
+          <Property Name="USR" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="SQ_DD" Type="datetime" Nullable="false" />
+          <Property Name="BIL_ID" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="MOB_ID" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="ITM" Type="int" Nullable="false" />
+          <Property Name="USR_DL" Type="varchar" MaxLength="12" />
+          <Property Name="END_DD" Type="datetime" />
+          <Property Name="END_ID" Type="varchar" MaxLength="1" />
+          <Property Name="REM" Type="varchar" MaxLength="60" />
+          <Property Name="SH_ITM" Type="int" />
+          <Property Name="BIL_TYPE" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="SH_LIST">
+          <Key>
+            <PropertyRef Name="BIL_ID" />
+            <PropertyRef Name="BIL_NO" />
+            <PropertyRef Name="BIL_ITM" />
+            <PropertyRef Name="ITM" />
+          </Key>
+          <Property Name="BIL_ID" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="BIL_NO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="BIL_ITM" Type="int" Nullable="false" />
+          <Property Name="ITM" Type="int" Nullable="false" />
+          <Property Name="YN" Type="varchar" MaxLength="1" />
+          <Property Name="CHK_MAN" Type="varchar" MaxLength="12" />
+          <Property Name="CHK_DATE" Type="datetime" />
+          <Property Name="REM" Type="ntext" />
+          <Property Name="SH_ITM" Type="int" />
+          <Property Name="CHK_MAN_MAIN" Type="varchar" MaxLength="12" />
+          <Property Name="YN1" Type="varchar" MaxLength="1" />
+          <Property Name="PRE_TAG" Type="varchar" MaxLength="1" />
+          <Property Name="CHK_MAN1" Type="varchar" MaxLength="12" />
+          <Property Name="CHK_MAN_MAIN1" Type="varchar" MaxLength="12" />
+          <Property Name="IS_REMODIFY" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="SH_OTHUSR">
+          <Key>
+            <PropertyRef Name="BIL_ID" />
+            <PropertyRef Name="MOB_ID" />
+            <PropertyRef Name="ITM" />
+            <PropertyRef Name="USR" />
+          </Key>
+          <Property Name="BIL_ID" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="MOB_ID" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="ITM" Type="int" Nullable="false" />
+          <Property Name="USR" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="OTHUSR" Type="varchar" MaxLength="250" />
+          <Property Name="IS_TITLE" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="TF_SHLC">
+          <Key>
+            <PropertyRef Name="BIL_ID" />
+            <PropertyRef Name="MOB_ID" />
+            <PropertyRef Name="ITM" />
+          </Key>
+          <Property Name="BIL_ID" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="MOB_ID" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="ITM" Type="int" Nullable="false" />
+          <Property Name="USR" Type="varchar" MaxLength="12" />
+          <Property Name="REM" Type="varchar" MaxLength="60" />
+          <Property Name="OTHUSR" Type="varchar" MaxLength="250" />
+          <Property Name="VALID_TIME" Type="smallint" />
+          <Property Name="DELAY_TIME" Type="smallint" />
+          <Property Name="TONEXT" Type="varchar" MaxLength="1" />
+          <Property Name="OTH1USR" Type="varchar" MaxLength="250" />
+          <Property Name="OTH1USR1" Type="varchar" MaxLength="250" />
+          <Property Name="GROUP_NO" Type="varchar" MaxLength="12" />
+          <Property Name="IS_TITLE" Type="varchar" MaxLength="1" />
+          <Property Name="SH_ITM" Type="int" />
+          <Property Name="CDT_SQL" Type="varchar" MaxLength="4000" />
+        </EntityType>
+        <EntityContainer Name="DB_HCTKModel1StoreContainer">
+          <EntitySet Name="MF_IJ" EntityType="Self.MF_IJ" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MF_SQ" EntityType="Self.MF_SQ" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MF_SQ_FX" EntityType="Self.MF_SQ_FX" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SH_DJ" EntityType="Self.SH_DJ" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SH_DL" EntityType="Self.SH_DL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SH_LIST" EntityType="Self.SH_LIST" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SH_OTHUSR" EntityType="Self.SH_OTHUSR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TF_SHLC" EntityType="Self.TF_SHLC" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_HCTKModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MF_IJ">
+          <Key>
+            <PropertyRef Name="IJ_ID" />
+            <PropertyRef Name="IJ_NO" />
+          </Key>
+          <Property Name="IJ_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IJ_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IJ_DD" Type="DateTime" Precision="3" />
+          <Property Name="IJ_REASON" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="FIX_CST" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ACC_NO_D" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ACC_NO_C" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="DEP" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="VOH_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="VOH_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="REF_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BAT_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="MAN_NO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="REM" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="USR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="CHK_MAN" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="PRT_SW" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CPY_SW" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="BIL_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BIL_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CLS_DATE" Type="DateTime" Precision="3" />
+          <Property Name="POS_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IJID" Type="Decimal" Precision="22" Scale="8" />
+          <Property Name="CAS_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BIL_TYPE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CNTT_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="ACC_NO_SS" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ACC_NO_SY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="MOB_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LOCK_MAN" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="LOCK_DATE" Type="DateTime" Precision="3" />
+          <Property Name="FJ_NUM" Type="Int16" />
+          <Property Name="SYS_DATE" Type="DateTime" Precision="3" />
+          <Property Name="POS_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CUS_NO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="TASK_ID" Type="Int32" />
+          <Property Name="PRT_USR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="SQ_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="SQ_NO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="SQ_ITM" Type="Int32" />
+          <Property Name="ISSVS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="FROMCB_CALC" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="JH_SO_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TZZG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="YG_NO" Type="String" MaxLength="65" FixedLength="false" Unicode="false" />
+          <Property Name="CANCEL_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CUR_ID_IFRS" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="EXC_RTO_IFRS" Type="Decimal" Precision="22" Scale="8" />
+          <Property Name="PRT_DATE" Type="DateTime" Precision="3" />
+          <Property Name="MODIFY_DD" Type="DateTime" Precision="3" />
+          <Property Name="MODIFY_MAN" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="SCAN_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SCAN_USR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="SCAN_DATE" Type="DateTime" Precision="3" />
+          <Property Name="SCAN_USR1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="SCAN_DATE1" Type="DateTime" Precision="3" />
+          <Property Name="GROUP_KEY" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IJ_NO_MES" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MF_SQ">
+          <Key>
+            <PropertyRef Name="SQ_NO" />
+          </Key>
+          <Property Name="SQ_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SQ_DD" Type="DateTime" Precision="3" />
+          <Property Name="DEP" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="CUS_NO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="SAL_NO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="PO_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="INC_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="REM" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="EST_DD" Type="DateTime" Precision="3" />
+          <Property Name="BIL_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="USR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="CHK_MAN" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="PRT_SW" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CPY_SW" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="BAT_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="BIL_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CLS_DATE" Type="DateTime" Precision="3" />
+          <Property Name="PO_DEP" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="CLS_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="BACK_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BIL_TYPE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CUR_ID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="EXC_RTO" Type="Decimal" Precision="22" Scale="8" />
+          <Property Name="SO_NO" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="MOB_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LOCK_MAN" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="LOCK_DATE" Type="DateTime" Precision="3" />
+          <Property Name="SYS_DATE" Type="DateTime" Precision="3" />
+          <Property Name="CAS_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TASK_ID" Type="Int32" />
+          <Property Name="SO_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="PRT_USR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="CNTT_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="CANCEL_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="PRT_DATE" Type="DateTime" Precision="3" />
+          <Property Name="MODIFY_DD" Type="DateTime" Precision="3" />
+          <Property Name="MODIFY_MAN" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MF_SQ_FX">
+          <Key>
+            <PropertyRef Name="SQ_ID" />
+            <PropertyRef Name="SQ_NO" />
+          </Key>
+          <Property Name="SQ_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SQ_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SQ_DD" Type="DateTime" Precision="3" />
+          <Property Name="DEP" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="CUS_NO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="SAL_NO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="BIL_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="BIL_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="REM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EST_DD" Type="DateTime" Precision="3" />
+          <Property Name="USR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="CHK_MAN" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="PRT_SW" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CPY_SW" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CLS_DATE" Type="DateTime" Precision="3" />
+          <Property Name="DEP_PO" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="CLS_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="BIL_TYPE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="CUR_ID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="EXC_RTO" Type="Decimal" Precision="22" Scale="8" />
+          <Property Name="MOB_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="LOCK_MAN" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="LOCK_DATE" Type="DateTime" Precision="3" />
+          <Property Name="SYS_DATE" Type="DateTime" Precision="3" />
+          <Property Name="PRT_USR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="CANCEL_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="PRT_DATE" Type="DateTime" Precision="3" />
+          <Property Name="MODIFY_DD" Type="DateTime" Precision="3" />
+          <Property Name="MODIFY_MAN" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SH_DJ">
+          <Key>
+            <PropertyRef Name="BIL_ID" />
+            <PropertyRef Name="BIL_NO" />
+            <PropertyRef Name="BIL_ITM" />
+          </Key>
+          <Property Name="BIL_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIL_NO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIL_ITM" Type="Int32" Nullable="false" />
+          <Property Name="BIL_DD" Type="DateTime" Precision="3" />
+          <Property Name="YN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DEP" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="USR_MAKE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CHECK" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="USR_CLOSE" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="REM" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="PRE_CHK_MAN" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="MOB_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="OT_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="OT_NO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="USR_N" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="SH_DD" Type="DateTime" Precision="3" />
+          <Property Name="OTHUSR" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="SH_ITM" Type="Int32" />
+          <Property Name="PRE_SH_ITM" Type="Int32" />
+          <Property Name="PRE_PRE_SH_ITM" Type="Int32" />
+          <Property Name="USR_REJIGGER" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="START_DD" Type="DateTime" Precision="3" />
+          <Property Name="CHK_DD" Type="DateTime" Precision="3" />
+          <Property Name="LAST_DD" Type="DateTime" Precision="3" />
+          <Property Name="OT_ID2" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="OT_NO2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CUS_NO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="DEP_BIL" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="BIL_TYPE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SAL_NO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="CUS_OS_NO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="BAT_NO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="EIP_STS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DTSH_SW" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="DTSH_NO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="VER_NO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NOT_RETURN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SYS_DATE" Type="DateTime" Precision="3" />
+          <Property Name="TYPE_NO" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="UNSUBMIT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="IS_REMODIFY" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="REM_BIL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SH_DL">
+          <Key>
+            <PropertyRef Name="USR" />
+            <PropertyRef Name="SQ_DD" />
+            <PropertyRef Name="BIL_ID" />
+            <PropertyRef Name="MOB_ID" />
+            <PropertyRef Name="ITM" />
+          </Key>
+          <Property Name="USR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SQ_DD" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BIL_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MOB_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ITM" Type="Int32" Nullable="false" />
+          <Property Name="USR_DL" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="END_DD" Type="DateTime" Precision="3" />
+          <Property Name="END_ID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="REM" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="SH_ITM" Type="Int32" />
+          <Property Name="BIL_TYPE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SH_LIST">
+          <Key>
+            <PropertyRef Name="BIL_ID" />
+            <PropertyRef Name="BIL_NO" />
+            <PropertyRef Name="BIL_ITM" />
+            <PropertyRef Name="ITM" />
+          </Key>
+          <Property Name="BIL_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIL_NO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BIL_ITM" Type="Int32" Nullable="false" />
+          <Property Name="ITM" Type="Int32" Nullable="false" />
+          <Property Name="YN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CHK_MAN" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="CHK_DATE" Type="DateTime" Precision="3" />
+          <Property Name="REM" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SH_ITM" Type="Int32" />
+          <Property Name="CHK_MAN_MAIN" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="YN1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="PRE_TAG" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CHK_MAN1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="CHK_MAN_MAIN1" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="IS_REMODIFY" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SH_OTHUSR">
+          <Key>
+            <PropertyRef Name="BIL_ID" />
+            <PropertyRef Name="MOB_ID" />
+            <PropertyRef Name="ITM" />
+            <PropertyRef Name="USR" />
+          </Key>
+          <Property Name="BIL_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MOB_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ITM" Type="Int32" Nullable="false" />
+          <Property Name="USR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OTHUSR" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="IS_TITLE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TF_SHLC">
+          <Key>
+            <PropertyRef Name="BIL_ID" />
+            <PropertyRef Name="MOB_ID" />
+            <PropertyRef Name="ITM" />
+          </Key>
+          <Property Name="BIL_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MOB_ID" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ITM" Type="Int32" Nullable="false" />
+          <Property Name="USR" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="REM" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="OTHUSR" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="VALID_TIME" Type="Int16" />
+          <Property Name="DELAY_TIME" Type="Int16" />
+          <Property Name="TONEXT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="OTH1USR" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="OTH1USR1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="GROUP_NO" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="IS_TITLE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SH_ITM" Type="Int32" />
+          <Property Name="CDT_SQL" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="DB_HCTKEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MF_IJ" EntityType="Self.MF_IJ" />
+          <EntitySet Name="MF_SQ" EntityType="Self.MF_SQ" />
+          <EntitySet Name="MF_SQ_FX" EntityType="Self.MF_SQ_FX" />
+          <EntitySet Name="SH_DJ" EntityType="Self.SH_DJ" />
+          <EntitySet Name="SH_DL" EntityType="Self.SH_DL" />
+          <EntitySet Name="SH_LIST" EntityType="Self.SH_LIST" />
+          <EntitySet Name="SH_OTHUSR" EntityType="Self.SH_OTHUSR" />
+          <EntitySet Name="TF_SHLC" EntityType="Self.TF_SHLC" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_HCTKModel1StoreContainer" CdmEntityContainer="DB_HCTKEntities1">
+          <EntitySetMapping Name="MF_IJ">
+            <EntityTypeMapping TypeName="DB_HCTKModel1.MF_IJ">
+              <MappingFragment StoreEntitySet="MF_IJ">
+                <ScalarProperty Name="IJ_ID" ColumnName="IJ_ID" />
+                <ScalarProperty Name="IJ_NO" ColumnName="IJ_NO" />
+                <ScalarProperty Name="IJ_DD" ColumnName="IJ_DD" />
+                <ScalarProperty Name="IJ_REASON" ColumnName="IJ_REASON" />
+                <ScalarProperty Name="FIX_CST" ColumnName="FIX_CST" />
+                <ScalarProperty Name="ACC_NO_D" ColumnName="ACC_NO_D" />
+                <ScalarProperty Name="ACC_NO_C" ColumnName="ACC_NO_C" />
+                <ScalarProperty Name="DEP" ColumnName="DEP" />
+                <ScalarProperty Name="VOH_ID" ColumnName="VOH_ID" />
+                <ScalarProperty Name="VOH_NO" ColumnName="VOH_NO" />
+                <ScalarProperty Name="REF_NO" ColumnName="REF_NO" />
+                <ScalarProperty Name="BAT_NO" ColumnName="BAT_NO" />
+                <ScalarProperty Name="MAN_NO" ColumnName="MAN_NO" />
+                <ScalarProperty Name="REM" ColumnName="REM" />
+                <ScalarProperty Name="USR" ColumnName="USR" />
+                <ScalarProperty Name="CHK_MAN" ColumnName="CHK_MAN" />
+                <ScalarProperty Name="PRT_SW" ColumnName="PRT_SW" />
+                <ScalarProperty Name="CPY_SW" ColumnName="CPY_SW" />
+                <ScalarProperty Name="BIL_NO" ColumnName="BIL_NO" />
+                <ScalarProperty Name="BIL_ID" ColumnName="BIL_ID" />
+                <ScalarProperty Name="CLS_DATE" ColumnName="CLS_DATE" />
+                <ScalarProperty Name="POS_NO" ColumnName="POS_NO" />
+                <ScalarProperty Name="IJID" ColumnName="IJID" />
+                <ScalarProperty Name="CAS_NO" ColumnName="CAS_NO" />
+                <ScalarProperty Name="BIL_TYPE" ColumnName="BIL_TYPE" />
+                <ScalarProperty Name="CNTT_NO" ColumnName="CNTT_NO" />
+                <ScalarProperty Name="ACC_NO_SS" ColumnName="ACC_NO_SS" />
+                <ScalarProperty Name="ACC_NO_SY" ColumnName="ACC_NO_SY" />
+                <ScalarProperty Name="MOB_ID" ColumnName="MOB_ID" />
+                <ScalarProperty Name="LOCK_MAN" ColumnName="LOCK_MAN" />
+                <ScalarProperty Name="LOCK_DATE" ColumnName="LOCK_DATE" />
+                <ScalarProperty Name="FJ_NUM" ColumnName="FJ_NUM" />
+                <ScalarProperty Name="SYS_DATE" ColumnName="SYS_DATE" />
+                <ScalarProperty Name="POS_ID" ColumnName="POS_ID" />
+                <ScalarProperty Name="CUS_NO" ColumnName="CUS_NO" />
+                <ScalarProperty Name="TASK_ID" ColumnName="TASK_ID" />
+                <ScalarProperty Name="PRT_USR" ColumnName="PRT_USR" />
+                <ScalarProperty Name="SQ_ID" ColumnName="SQ_ID" />
+                <ScalarProperty Name="SQ_NO" ColumnName="SQ_NO" />
+                <ScalarProperty Name="SQ_ITM" ColumnName="SQ_ITM" />
+                <ScalarProperty Name="ISSVS" ColumnName="ISSVS" />
+                <ScalarProperty Name="FROMCB_CALC" ColumnName="FROMCB_CALC" />
+                <ScalarProperty Name="JH_SO_NO" ColumnName="JH_SO_NO" />
+                <ScalarProperty Name="TZZG" ColumnName="TZZG" />
+                <ScalarProperty Name="YG_NO" ColumnName="YG_NO" />
+                <ScalarProperty Name="CANCEL_ID" ColumnName="CANCEL_ID" />
+                <ScalarProperty Name="CUR_ID_IFRS" ColumnName="CUR_ID_IFRS" />
+                <ScalarProperty Name="EXC_RTO_IFRS" ColumnName="EXC_RTO_IFRS" />
+                <ScalarProperty Name="PRT_DATE" ColumnName="PRT_DATE" />
+                <ScalarProperty Name="MODIFY_DD" ColumnName="MODIFY_DD" />
+                <ScalarProperty Name="MODIFY_MAN" ColumnName="MODIFY_MAN" />
+                <ScalarProperty Name="SCAN_ID" ColumnName="SCAN_ID" />
+                <ScalarProperty Name="SCAN_USR" ColumnName="SCAN_USR" />
+                <ScalarProperty Name="SCAN_DATE" ColumnName="SCAN_DATE" />
+                <ScalarProperty Name="SCAN_USR1" ColumnName="SCAN_USR1" />
+                <ScalarProperty Name="SCAN_DATE1" ColumnName="SCAN_DATE1" />
+                <ScalarProperty Name="GROUP_KEY" ColumnName="GROUP_KEY" />
+                <ScalarProperty Name="IJ_NO_MES" ColumnName="IJ_NO_MES" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MF_SQ">
+            <EntityTypeMapping TypeName="DB_HCTKModel1.MF_SQ">
+              <MappingFragment StoreEntitySet="MF_SQ">
+                <ScalarProperty Name="SQ_NO" ColumnName="SQ_NO" />
+                <ScalarProperty Name="SQ_DD" ColumnName="SQ_DD" />
+                <ScalarProperty Name="DEP" ColumnName="DEP" />
+                <ScalarProperty Name="CUS_NO" ColumnName="CUS_NO" />
+                <ScalarProperty Name="SAL_NO" ColumnName="SAL_NO" />
+                <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+                <ScalarProperty Name="INC_ID" ColumnName="INC_ID" />
+                <ScalarProperty Name="REM" ColumnName="REM" />
+                <ScalarProperty Name="EST_DD" ColumnName="EST_DD" />
+                <ScalarProperty Name="BIL_ID" ColumnName="BIL_ID" />
+                <ScalarProperty Name="USR" ColumnName="USR" />
+                <ScalarProperty Name="CHK_MAN" ColumnName="CHK_MAN" />
+                <ScalarProperty Name="PRT_SW" ColumnName="PRT_SW" />
+                <ScalarProperty Name="CPY_SW" ColumnName="CPY_SW" />
+                <ScalarProperty Name="BAT_NO" ColumnName="BAT_NO" />
+                <ScalarProperty Name="BIL_NO" ColumnName="BIL_NO" />
+                <ScalarProperty Name="CLS_DATE" ColumnName="CLS_DATE" />
+                <ScalarProperty Name="PO_DEP" ColumnName="PO_DEP" />
+                <ScalarProperty Name="CLS_ID" ColumnName="CLS_ID" />
+                <ScalarProperty Name="BACK_ID" ColumnName="BACK_ID" />
+                <ScalarProperty Name="BIL_TYPE" ColumnName="BIL_TYPE" />
+                <ScalarProperty Name="CUR_ID" ColumnName="CUR_ID" />
+                <ScalarProperty Name="EXC_RTO" ColumnName="EXC_RTO" />
+                <ScalarProperty Name="SO_NO" ColumnName="SO_NO" />
+                <ScalarProperty Name="MOB_ID" ColumnName="MOB_ID" />
+                <ScalarProperty Name="LOCK_MAN" ColumnName="LOCK_MAN" />
+                <ScalarProperty Name="LOCK_DATE" ColumnName="LOCK_DATE" />
+                <ScalarProperty Name="SYS_DATE" ColumnName="SYS_DATE" />
+                <ScalarProperty Name="CAS_NO" ColumnName="CAS_NO" />
+                <ScalarProperty Name="TASK_ID" ColumnName="TASK_ID" />
+                <ScalarProperty Name="SO_ID" ColumnName="SO_ID" />
+                <ScalarProperty Name="PRT_USR" ColumnName="PRT_USR" />
+                <ScalarProperty Name="CNTT_NO" ColumnName="CNTT_NO" />
+                <ScalarProperty Name="CANCEL_ID" ColumnName="CANCEL_ID" />
+                <ScalarProperty Name="PRT_DATE" ColumnName="PRT_DATE" />
+                <ScalarProperty Name="MODIFY_DD" ColumnName="MODIFY_DD" />
+                <ScalarProperty Name="MODIFY_MAN" ColumnName="MODIFY_MAN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MF_SQ_FX">
+            <EntityTypeMapping TypeName="DB_HCTKModel1.MF_SQ_FX">
+              <MappingFragment StoreEntitySet="MF_SQ_FX">
+                <ScalarProperty Name="SQ_ID" ColumnName="SQ_ID" />
+                <ScalarProperty Name="SQ_NO" ColumnName="SQ_NO" />
+                <ScalarProperty Name="SQ_DD" ColumnName="SQ_DD" />
+                <ScalarProperty Name="DEP" ColumnName="DEP" />
+                <ScalarProperty Name="CUS_NO" ColumnName="CUS_NO" />
+                <ScalarProperty Name="SAL_NO" ColumnName="SAL_NO" />
+                <ScalarProperty Name="BIL_ID" ColumnName="BIL_ID" />
+                <ScalarProperty Name="BIL_NO" ColumnName="BIL_NO" />
+                <ScalarProperty Name="REM" ColumnName="REM" />
+                <ScalarProperty Name="EST_DD" ColumnName="EST_DD" />
+                <ScalarProperty Name="USR" ColumnName="USR" />
+                <ScalarProperty Name="CHK_MAN" ColumnName="CHK_MAN" />
+                <ScalarProperty Name="PRT_SW" ColumnName="PRT_SW" />
+                <ScalarProperty Name="CPY_SW" ColumnName="CPY_SW" />
+                <ScalarProperty Name="CLS_DATE" ColumnName="CLS_DATE" />
+                <ScalarProperty Name="DEP_PO" ColumnName="DEP_PO" />
+                <ScalarProperty Name="CLS_ID" ColumnName="CLS_ID" />
+                <ScalarProperty Name="BIL_TYPE" ColumnName="BIL_TYPE" />
+                <ScalarProperty Name="CUR_ID" ColumnName="CUR_ID" />
+                <ScalarProperty Name="EXC_RTO" ColumnName="EXC_RTO" />
+                <ScalarProperty Name="MOB_ID" ColumnName="MOB_ID" />
+                <ScalarProperty Name="LOCK_MAN" ColumnName="LOCK_MAN" />
+                <ScalarProperty Name="LOCK_DATE" ColumnName="LOCK_DATE" />
+                <ScalarProperty Name="SYS_DATE" ColumnName="SYS_DATE" />
+                <ScalarProperty Name="PRT_USR" ColumnName="PRT_USR" />
+                <ScalarProperty Name="CANCEL_ID" ColumnName="CANCEL_ID" />
+                <ScalarProperty Name="PRT_DATE" ColumnName="PRT_DATE" />
+                <ScalarProperty Name="MODIFY_DD" ColumnName="MODIFY_DD" />
+                <ScalarProperty Name="MODIFY_MAN" ColumnName="MODIFY_MAN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SH_DJ">
+            <EntityTypeMapping TypeName="DB_HCTKModel1.SH_DJ">
+              <MappingFragment StoreEntitySet="SH_DJ">
+                <ScalarProperty Name="BIL_ID" ColumnName="BIL_ID" />
+                <ScalarProperty Name="BIL_NO" ColumnName="BIL_NO" />
+                <ScalarProperty Name="BIL_ITM" ColumnName="BIL_ITM" />
+                <ScalarProperty Name="BIL_DD" ColumnName="BIL_DD" />
+                <ScalarProperty Name="YN" ColumnName="YN" />
+                <ScalarProperty Name="DEP" ColumnName="DEP" />
+                <ScalarProperty Name="USR_MAKE" ColumnName="USR_MAKE" />
+                <ScalarProperty Name="USR_CHECK" ColumnName="USR_CHECK" />
+                <ScalarProperty Name="USR_CLOSE" ColumnName="USR_CLOSE" />
+                <ScalarProperty Name="REM" ColumnName="REM" />
+                <ScalarProperty Name="PRE_CHK_MAN" ColumnName="PRE_CHK_MAN" />
+                <ScalarProperty Name="MOB_ID" ColumnName="MOB_ID" />
+                <ScalarProperty Name="OT_ID" ColumnName="OT_ID" />
+                <ScalarProperty Name="OT_NO" ColumnName="OT_NO" />
+                <ScalarProperty Name="USR_N" ColumnName="USR_N" />
+                <ScalarProperty Name="SH_DD" ColumnName="SH_DD" />
+                <ScalarProperty Name="OTHUSR" ColumnName="OTHUSR" />
+                <ScalarProperty Name="SH_ITM" ColumnName="SH_ITM" />
+                <ScalarProperty Name="PRE_SH_ITM" ColumnName="PRE_SH_ITM" />
+                <ScalarProperty Name="PRE_PRE_SH_ITM" ColumnName="PRE_PRE_SH_ITM" />
+                <ScalarProperty Name="USR_REJIGGER" ColumnName="USR_REJIGGER" />
+                <ScalarProperty Name="START_DD" ColumnName="START_DD" />
+                <ScalarProperty Name="CHK_DD" ColumnName="CHK_DD" />
+                <ScalarProperty Name="LAST_DD" ColumnName="LAST_DD" />
+                <ScalarProperty Name="OT_ID2" ColumnName="OT_ID2" />
+                <ScalarProperty Name="OT_NO2" ColumnName="OT_NO2" />
+                <ScalarProperty Name="CUS_NO" ColumnName="CUS_NO" />
+                <ScalarProperty Name="DEP_BIL" ColumnName="DEP_BIL" />
+                <ScalarProperty Name="BIL_TYPE" ColumnName="BIL_TYPE" />
+                <ScalarProperty Name="SAL_NO" ColumnName="SAL_NO" />
+                <ScalarProperty Name="CUS_OS_NO" ColumnName="CUS_OS_NO" />
+                <ScalarProperty Name="BAT_NO" ColumnName="BAT_NO" />
+                <ScalarProperty Name="EIP_STS" ColumnName="EIP_STS" />
+                <ScalarProperty Name="DTSH_SW" ColumnName="DTSH_SW" />
+                <ScalarProperty Name="DTSH_NO" ColumnName="DTSH_NO" />
+                <ScalarProperty Name="VER_NO" ColumnName="VER_NO" />
+                <ScalarProperty Name="NOT_RETURN" ColumnName="NOT_RETURN" />
+                <ScalarProperty Name="SYS_DATE" ColumnName="SYS_DATE" />
+                <ScalarProperty Name="TYPE_NO" ColumnName="TYPE_NO" />
+                <ScalarProperty Name="UNSUBMIT" ColumnName="UNSUBMIT" />
+                <ScalarProperty Name="IS_REMODIFY" ColumnName="IS_REMODIFY" />
+                <ScalarProperty Name="REM_BIL" ColumnName="REM_BIL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SH_DL">
+            <EntityTypeMapping TypeName="DB_HCTKModel1.SH_DL">
+              <MappingFragment StoreEntitySet="SH_DL">
+                <ScalarProperty Name="USR" ColumnName="USR" />
+                <ScalarProperty Name="SQ_DD" ColumnName="SQ_DD" />
+                <ScalarProperty Name="BIL_ID" ColumnName="BIL_ID" />
+                <ScalarProperty Name="MOB_ID" ColumnName="MOB_ID" />
+                <ScalarProperty Name="ITM" ColumnName="ITM" />
+                <ScalarProperty Name="USR_DL" ColumnName="USR_DL" />
+                <ScalarProperty Name="END_DD" ColumnName="END_DD" />
+                <ScalarProperty Name="END_ID" ColumnName="END_ID" />
+                <ScalarProperty Name="REM" ColumnName="REM" />
+                <ScalarProperty Name="SH_ITM" ColumnName="SH_ITM" />
+                <ScalarProperty Name="BIL_TYPE" ColumnName="BIL_TYPE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SH_LIST">
+            <EntityTypeMapping TypeName="DB_HCTKModel1.SH_LIST">
+              <MappingFragment StoreEntitySet="SH_LIST">
+                <ScalarProperty Name="BIL_ID" ColumnName="BIL_ID" />
+                <ScalarProperty Name="BIL_NO" ColumnName="BIL_NO" />
+                <ScalarProperty Name="BIL_ITM" ColumnName="BIL_ITM" />
+                <ScalarProperty Name="ITM" ColumnName="ITM" />
+                <ScalarProperty Name="YN" ColumnName="YN" />
+                <ScalarProperty Name="CHK_MAN" ColumnName="CHK_MAN" />
+                <ScalarProperty Name="CHK_DATE" ColumnName="CHK_DATE" />
+                <ScalarProperty Name="REM" ColumnName="REM" />
+                <ScalarProperty Name="SH_ITM" ColumnName="SH_ITM" />
+                <ScalarProperty Name="CHK_MAN_MAIN" ColumnName="CHK_MAN_MAIN" />
+                <ScalarProperty Name="YN1" ColumnName="YN1" />
+                <ScalarProperty Name="PRE_TAG" ColumnName="PRE_TAG" />
+                <ScalarProperty Name="CHK_MAN1" ColumnName="CHK_MAN1" />
+                <ScalarProperty Name="CHK_MAN_MAIN1" ColumnName="CHK_MAN_MAIN1" />
+                <ScalarProperty Name="IS_REMODIFY" ColumnName="IS_REMODIFY" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SH_OTHUSR">
+            <EntityTypeMapping TypeName="DB_HCTKModel1.SH_OTHUSR">
+              <MappingFragment StoreEntitySet="SH_OTHUSR">
+                <ScalarProperty Name="BIL_ID" ColumnName="BIL_ID" />
+                <ScalarProperty Name="MOB_ID" ColumnName="MOB_ID" />
+                <ScalarProperty Name="ITM" ColumnName="ITM" />
+                <ScalarProperty Name="USR" ColumnName="USR" />
+                <ScalarProperty Name="OTHUSR" ColumnName="OTHUSR" />
+                <ScalarProperty Name="IS_TITLE" ColumnName="IS_TITLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TF_SHLC">
+            <EntityTypeMapping TypeName="DB_HCTKModel1.TF_SHLC">
+              <MappingFragment StoreEntitySet="TF_SHLC">
+                <ScalarProperty Name="BIL_ID" ColumnName="BIL_ID" />
+                <ScalarProperty Name="MOB_ID" ColumnName="MOB_ID" />
+                <ScalarProperty Name="ITM" ColumnName="ITM" />
+                <ScalarProperty Name="USR" ColumnName="USR" />
+                <ScalarProperty Name="REM" ColumnName="REM" />
+                <ScalarProperty Name="OTHUSR" ColumnName="OTHUSR" />
+                <ScalarProperty Name="VALID_TIME" ColumnName="VALID_TIME" />
+                <ScalarProperty Name="DELAY_TIME" ColumnName="DELAY_TIME" />
+                <ScalarProperty Name="TONEXT" ColumnName="TONEXT" />
+                <ScalarProperty Name="OTH1USR" ColumnName="OTH1USR" />
+                <ScalarProperty Name="OTH1USR1" ColumnName="OTH1USR1" />
+                <ScalarProperty Name="GROUP_NO" ColumnName="GROUP_NO" />
+                <ScalarProperty Name="IS_TITLE" ColumnName="IS_TITLE" />
+                <ScalarProperty Name="SH_ITM" ColumnName="SH_ITM" />
+                <ScalarProperty Name="CDT_SQL" ColumnName="CDT_SQL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
